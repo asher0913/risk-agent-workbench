@@ -4,17 +4,29 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "risk-agent-workbench"
-version = "0.1.0"
-description = "An evidence-grounded, versioned decision workflow for reviewing synthetic commercial-risk cases with traceable rules, missing-evidence checks, and calibrated evaluation."
+version = "1.0.0"
+description = "Evidence-grounded counterparty review: typed fact extraction with span citations, missing- and stale-evidence abstention, versioned policies with shadow-run impact analysis, evaluated against a keyword baseline on development and held-out phrasings."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 license = {text = "MIT"}
-authors = [{name = "Asher"}]
-classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
-]
+authors = [{name = "Yixuan Zhang"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+riskbench = "riskbench.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["risk_agent_workbench*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

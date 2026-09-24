@@ -1,0 +1,215 @@
+{
+  "development": {
+    "keyword baseline": {
+      "accuracy": 0.162,
+      "missed_escalations": 0.11891891891891893,
+      "escalations_not_escalated": 0.23243243243243245,
+      "false_escalations_of_clean": 0.9589442815249267,
+      "clean_not_cleared": 0.9736070381231672,
+      "abstention_rate": 0.0,
+      "abstention_recall": 0.0,
+      "guessed_despite_missing_evidence": 0.398576512455516,
+      "citations": 2420,
+      "citation_validity": 1.0,
+      "confusion": {
+        "clear->clear": 9,
+        "clear->escalate": 327,
+        "clear->review": 5,
+        "escalate->clear": 22,
+        "escalate->escalate": 142,
+        "escalate->review": 21,
+        "needs_evidence->clear": 56,
+        "needs_evidence->escalate": 169,
+        "needs_evidence->review": 56,
+        "review->clear": 3,
+        "review->escalate": 179,
+        "review->review": 11
+      },
+      "truth_distribution": {
+        "clear": 341,
+        "escalate": 185,
+        "review": 193,
+        "needs_evidence": 281
+      }
+    },
+    "keyword + negation baseline": {
+      "accuracy": 0.414,
+      "missed_escalations": 0.518918918918919,
+      "escalations_not_escalated": 0.6972972972972973,
+      "false_escalations_of_clean": 0.03812316715542522,
+      "clean_not_cleared": 0.14076246334310852,
+      "abstention_rate": 0.0,
+      "abstention_recall": 0.0,
+      "guessed_despite_missing_evidence": 0.9715302491103203,
+      "citations": 627,
+      "citation_validity": 1.0,
+      "confusion": {
+        "clear->clear": 293,
+        "clear->escalate": 13,
+        "clear->review": 35,
+        "escalate->clear": 96,
+        "escalate->escalate": 56,
+        "escalate->review": 33,
+        "needs_evidence->clear": 240,
+        "needs_evidence->escalate": 8,
+        "needs_evidence->review": 33,
+        "review->clear": 107,
+        "review->escalate": 21,
+        "review->review": 65
+      },
+      "truth_distribution": {
+        "clear": 341,
+        "escalate": 185,
+        "review": 193,
+        "needs_evidence": 281
+      }
+    },
+    "structured extraction, no abstention": {
+      "accuracy": 0.719,
+      "missed_escalations": 0.0,
+      "escalations_not_escalated": 0.0,
+      "false_escalations_of_clean": 0.0,
+      "clean_not_cleared": 0.0,
+      "abstention_rate": 0.0,
+      "abstention_recall": 0.0,
+      "guessed_despite_missing_evidence": 1.0,
+      "citations": 941,
+      "citation_validity": 1.0,
+      "confusion": {
+        "clear->clear": 341,
+        "escalate->escalate": 185,
+        "needs_evidence->clear": 219,
+        "needs_evidence->review": 62,
+        "review->review": 193
+      },
+      "truth_distribution": {
+        "clear": 341,
+        "escalate": 185,
+        "review": 193,
+        "needs_evidence": 281
+      }
+    },
+    "structured extraction + abstention": {
+      "accuracy": 1.0,
+      "missed_escalations": 0.0,
+      "escalations_not_escalated": 0.0,
+      "false_escalations_of_clean": 0.0,
+      "clean_not_cleared": 0.0,
+      "abstention_rate": 0.281,
+      "abstention_recall": 1.0,
+      "guessed_despite_missing_evidence": 0.0,
+      "citations": 941,
+      "citation_validity": 1.0,
+      "confusion": {
+        "clear->clear": 341,
+        "escalate->escalate": 185,
+        "needs_evidence->needs_evidence": 281,
+        "review->review": 193
+      },
+      "truth_distribution": {
+        "clear": 341,
+        "escalate": 185,
+        "review": 193,
+        "needs_evidence": 281
+      }
+    }
+  },
+  "held_out_phrasing": {
+    "keyword baseline": {
+      "accuracy": 0.329,
+      "missed_escalations": 1.0,
+      "escalations_not_escalated": 1.0,
+      "false_escalations_of_clean": 0.0,
+      "clean_not_cleared": 0.0,
+      "abstention_rate": 0.0,
+      "abstention_recall": 0.0,
+      "guessed_despite_missing_evidence": 1.0,
+      "citations": 0,
+      "citation_validity": 1.0,
+      "confusion": {
+        "clear->clear": 329,
+        "escalate->clear": 185,
+        "needs_evidence->clear": 281,
+        "review->clear": 205
+      },
+      "truth_distribution": {
+        "needs_evidence": 281,
+        "clear": 329,
+        "escalate": 185,
+        "review": 205
+      }
+    },
+    "keyword + negation baseline": {
+      "accuracy": 0.329,
+      "missed_escalations": 1.0,
+      "escalations_not_escalated": 1.0,
+      "false_escalations_of_clean": 0.0,
+      "clean_not_cleared": 0.0,
+      "abstention_rate": 0.0,
+      "abstention_recall": 0.0,
+      "guessed_despite_missing_evidence": 1.0,
+      "citations": 0,
+      "citation_validity": 1.0,
+      "confusion": {
+        "clear->clear": 329,
+        "escalate->clear": 185,
+        "needs_evidence->clear": 281,
+        "review->clear": 205
+      },
+      "truth_distribution": {
+        "needs_evidence": 281,
+        "clear": 329,
+        "escalate": 185,
+        "review": 205
+      }
+    },
+    "structured extraction, no abstention": {
+      "accuracy": 0.329,
+      "missed_escalations": 1.0,
+      "escalations_not_escalated": 1.0,
+      "false_escalations_of_clean": 0.0,
+      "clean_not_cleared": 0.0,
+      "abstention_rate": 0.0,
+      "abstention_recall": 0.0,
+      "guessed_despite_missing_evidence": 1.0,
+      "citations": 0,
+      "citation_validity": 1.0,
+      "confusion": {
+        "clear->clear": 329,
+        "escalate->clear": 185,
+        "needs_evidence->clear": 281,
+        "review->clear": 205
+      },
+      "truth_distribution": {
+        "needs_evidence": 281,
+        "clear": 329,
+        "escalate": 185,
+        "review": 205
+      }
+    },
+    "structured extraction + abstention": {
+      "accuracy": 0.281,
+      "missed_escalations": 0.0,
+      "escalations_not_escalated": 1.0,
+      "false_escalations_of_clean": 0.0,
+      "clean_not_cleared": 1.0,
+      "abstention_rate": 1.0,
+      "abstention_recall": 1.0,
+      "guessed_despite_missing_evidence": 0.0,
+      "citations": 0,
+      "citation_validity": 1.0,
+      "confusion": {
+        "clear->needs_evidence": 329,
+        "escalate->needs_evidence": 185,
+        "needs_evidence->needs_evidence": 281,
+        "review->needs_evidence": 205
+      },
+      "truth_distribution": {
+        "needs_evidence": 281,
+        "clear": 329,
+        "escalate": 185,
+        "review": 205
+      }
+    }
+  }
+}

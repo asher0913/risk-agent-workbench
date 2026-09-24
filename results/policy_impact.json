@@ -1,0 +1,244 @@
+{
+  "old": "2026.1",
+  "new": "2026.2",
+  "parameter_changes": {
+    "past_due_bands": [
+      [
+        [
+          91,
+          40
+        ],
+        [
+          31,
+          20
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        [
+          61,
+          40
+        ],
+        [
+          31,
+          25
+        ],
+        [
+          1,
+          5
+        ]
+      ]
+    ],
+    "ownership_window_days": [
+      180,
+      365
+    ],
+    "screening_review_from": [
+      0.8,
+      0.75
+    ]
+  },
+  "cases": 1000,
+  "decisions_changed": 123,
+  "share_changed": 0.123,
+  "transitions": {
+    "clear->review": 88,
+    "review->escalate": 18,
+    "needs_evidence->escalate": 11,
+    "clear->escalate": 6
+  },
+  "examples": {
+    "clear->review": [
+      {
+        "case_id": "c0006",
+        "before": [],
+        "after": [
+          "ownership_change<=365d"
+        ],
+        "scores": [
+          0,
+          25
+        ]
+      },
+      {
+        "case_id": "c0016",
+        "before": [
+          "past_due>=31d"
+        ],
+        "after": [
+          "past_due>=61d"
+        ],
+        "scores": [
+          20,
+          40
+        ]
+      },
+      {
+        "case_id": "c0021",
+        "before": [
+          "past_due>=31d"
+        ],
+        "after": [
+          "past_due>=61d"
+        ],
+        "scores": [
+          20,
+          40
+        ]
+      }
+    ],
+    "clear->escalate": [
+      {
+        "case_id": "c0036",
+        "before": [
+          "past_due>=31d"
+        ],
+        "after": [
+          "past_due>=61d",
+          "ownership_change<=365d"
+        ],
+        "scores": [
+          20,
+          65
+        ]
+      },
+      {
+        "case_id": "c0253",
+        "before": [
+          "past_due>=31d"
+        ],
+        "after": [
+          "past_due>=61d",
+          "ownership_change<=365d"
+        ],
+        "scores": [
+          20,
+          65
+        ]
+      },
+      {
+        "case_id": "c0378",
+        "before": [
+          "past_due>=31d"
+        ],
+        "after": [
+          "past_due>=61d",
+          "screening_near_match"
+        ],
+        "scores": [
+          20,
+          70
+        ]
+      }
+    ],
+    "review->escalate": [
+      {
+        "case_id": "c0055",
+        "before": [
+          "past_due>=31d",
+          "screening_near_match"
+        ],
+        "after": [
+          "past_due>=31d",
+          "ownership_change<=365d",
+          "screening_near_match"
+        ],
+        "scores": [
+          50,
+          80
+        ]
+      },
+      {
+        "case_id": "c0106",
+        "before": [
+          "past_due>=91d"
+        ],
+        "after": [
+          "past_due>=61d",
+          "ownership_change<=365d"
+        ],
+        "scores": [
+          40,
+          65
+        ]
+      },
+      {
+        "case_id": "c0117",
+        "before": [
+          "past_due>=31d",
+          "audit_qualified"
+        ],
+        "after": [
+          "past_due>=61d",
+          "audit_qualified"
+        ],
+        "scores": [
+          50,
+          70
+        ]
+      }
+    ],
+    "needs_evidence->escalate": [
+      {
+        "case_id": "c0191",
+        "before": [
+          "past_due>=91d"
+        ],
+        "after": [
+          "past_due>=61d",
+          "screening_near_match"
+        ],
+        "scores": [
+          40,
+          70
+        ]
+      },
+      {
+        "case_id": "c0233",
+        "before": [
+          "past_due>=91d"
+        ],
+        "after": [
+          "past_due>=61d",
+          "screening_near_match"
+        ],
+        "scores": [
+          40,
+          70
+        ]
+      },
+      {
+        "case_id": "c0356",
+        "before": [
+          "past_due>=31d",
+          "audit_qualified"
+        ],
+        "after": [
+          "past_due>=61d",
+          "audit_qualified"
+        ],
+        "scores": [
+          50,
+          70
+        ]
+      }
+    ]
+  },
+  "decision_counts": {
+    "2026.1": {
+      "clear": 341,
+      "escalate": 185,
+      "review": 193,
+      "needs_evidence": 281
+    },
+    "2026.2": {
+      "clear": 247,
+      "escalate": 220,
+      "review": 263,
+      "needs_evidence": 270
+    }
+  }
+}
